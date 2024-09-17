@@ -15,6 +15,7 @@ You'll also need to be a member of the following NCI projects:
  * [`hh5`](https://my.nci.org.au/mancini/project/hh5): Climate and Weather Conda environments
  * [`rt52`](https://my.nci.org.au/mancini/project/rt52): ERA5 mirror
  * [`zz93`](https://my.nci.org.au/mancini/project/zz93): ERA5-land mirror
+ * [`gb02'](https://my.nci.org.au/mancini/project/gb02): 21st Century Weather CoE project.
  
 Cylc at NCI is managed centrally, see [NCI's documentation](https://opus.nci.org.au/display/DAE/UK+Met+Office+Environment+on+NCI) for instructions on setting it up. Contact help@nci.org.au for assistance with using Cylc or the ARE platform. If you have trouble with the model itself you can ask questions on the [ACCESS Hive Forum](https://forum.access-hive.org.au/latest)
 
