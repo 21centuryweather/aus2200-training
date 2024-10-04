@@ -1,6 +1,6 @@
 # Setup
 
-This tutorial is made up of Jupyter notebooks. You can view them as a website at https://scottwales.github.io/aus2200-training, or if you like you can download them from https://github.com/scottwales/aus2200-training.
+This tutorial is made up of Jupyter notebooks. You can view them as a website at https://21centuryweather.github.io/aus2200-training, or if you like you can download them from https://github.com/21centuryweather/aus2200-training.
 
 ## Accounts
 
@@ -15,6 +15,7 @@ You'll also need to be a member of the following NCI projects:
  * [`hh5`](https://my.nci.org.au/mancini/project/hh5): Climate and Weather Conda environments
  * [`rt52`](https://my.nci.org.au/mancini/project/rt52): ERA5 mirror
  * [`zz93`](https://my.nci.org.au/mancini/project/zz93): ERA5-land mirror
+ * [`gb02`](https://my.nci.org.au/mancini/project/gb02): 21st Century Weather CoE project.
  
 Cylc at NCI is managed centrally, see [NCI's documentation](https://opus.nci.org.au/display/DAE/UK+Met+Office+Environment+on+NCI) for instructions on setting it up. Contact help@nci.org.au for assistance with using Cylc or the ARE platform. If you have trouble with the model itself you can ask questions on the [ACCESS Hive Forum](https://forum.access-hive.org.au/latest)
 
@@ -26,7 +27,7 @@ Start up a VDI session at https://are.nci.org.au, using the settings:
 Walltime:       4
 Queue:          normalbw
 Compute Size:   small
-Project:        nf33
+Project:        gb02
 Storage:        gdata/access+gdata/hr22+gdata/ki32+gdata/hh5+gdata/rt52+gdata/zz93
 ```
 
