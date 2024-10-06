@@ -186,6 +186,7 @@
 
 
 
+
 <li class="toctree-l1"><a class="reference internal" href="running.html">Running the Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="outputs.html">Model Outputs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="evaluating.html">Evaluating the Model</a></li>
@@ -396,6 +397,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rotated-poles">Rotated Poles</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-suite">Running the suite</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cap-and-ants">CAP and ANTS</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ancil-files">Ancil files</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-ancillaries">Editing Ancillaries</a></li>
@@ -443,6 +445,7 @@ document.write(`
 <li><p><strong>levset</strong>: Vertical levels - RAL configurations should use L90_40km (90 vertical levels, max height 40 km)</p></li>
 </ul>
 <p><img alt="Ancil Resolution" src="_images/ancil-resolution.png" /></p>
+<p>All the data presented in this GUI panel is stored in the <code class="docutils literal notranslate"><span class="pre">rose-suite.conf</span></code> file within <code class="docutils literal notranslate"><span class="pre">u-cy368</span></code> directory.</p>
 </section>
 </section>
 <section id="ancillary-options">
@@ -576,6 +579,22 @@ document.write(`
 <img alt="_images/75231a0ea2910dc17d6b0450b5e283adb656b26ebaa2ef506a1708005877d9d1.png" src="_images/75231a0ea2910dc17d6b0450b5e283adb656b26ebaa2ef506a1708005877d9d1.png" />
 </div>
 </div>
+</section>
+<section id="running-the-suite">
+<h1>Running the suite<a class="headerlink" href="#running-the-suite" title="Link to this heading">#</a></h1>
+<p>Once you are happy with the configuration of your regional sub-domain, you can execute the suite to generate the required ancilliary information in your sub-domain using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rose suite-run
+</pre></div>
+</div>
+<p>Make sure you execute this command from inside the directory containing your suite, which is typically <code class="docutils literal notranslate"><span class="pre">~/roses/u-cy368</span></code>, otherwise you will generate an error:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">FAIL</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">CURRENT_WORKING_DIRECTORY</span><span class="o">&gt;</span><span class="p">:</span> <span class="n">rose</span><span class="o">-</span><span class="n">suite</span><span class="o">.</span><span class="n">conf</span> <span class="ow">not</span> <span class="n">found</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>After executing that command, it will take a few moments for the <code class="docutils literal notranslate"><span class="pre">rose</span></code> gui to appear. You can then watch the various jobs of the suite exectute.</p>
+<p><img alt="u-cy368-start" src="_images/u-cy368-start.png" /></p>
+<p>As with other rose/cylc suites, you can click on the arrows to expand all the jobs in the task list. You can also look at the suite graph in the second view using the buttons on the top right of the menu bar.
+<img alt="u-cy368-graph" src="_images/u-cy368-graph.png" /></p>
+<p>Using logic in the <code class="docutils literal notranslate"><span class="pre">suite.rc</span></code> and <code class="docutils literal notranslate"><span class="pre">./suite-runtime/master.rc</span></code> the suite will loop over all regions and resolutions defined in <code class="docutils literal notranslate"><span class="pre">rose-suite.conf</span></code>. These regions are processed in <code class="docutils literal notranslate"><span class="pre">./suite-setup.rc</span></code> which the creates a <code class="docutils literal notranslate"><span class="pre">jinja</span></code> dictionary of all the regional details that need to be passed  the required ancillaries for each region and resolution.</p>
 </section>
 <section id="cap-and-ants">
 <h1>CAP and ANTS<a class="headerlink" href="#cap-and-ants" title="Link to this heading">#</a></h1>
@@ -729,6 +748,7 @@ module<span class="w"> </span>load<span class="w"> </span>ants
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rotated-poles">Rotated Poles</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-suite">Running the suite</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cap-and-ants">CAP and ANTS</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ancil-files">Ancil files</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-ancillaries">Editing Ancillaries</a></li>
